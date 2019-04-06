@@ -23,5 +23,6 @@ from backend import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('django.contrib.auth.urls')),
+    url(r'^$', auth_views.LoginView.as_view(), name='login'),
     url(r'^index/', views.index, name='index'),
 ]
